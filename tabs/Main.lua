@@ -2,7 +2,6 @@ supportedOrientations(LANDSCAPE_ANY)
 function setup()
     displayMode(FULLSCREEN)
     --displayMode(OVERLAY)
-    --backingMode(RETAINED)
     smooth()
     set_Globals()
 end 
