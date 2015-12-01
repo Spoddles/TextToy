@@ -1,4 +1,4 @@
-Words5 = {
+Words[5] = {
 "AAHED",
 "AALII",
 "AARGH",

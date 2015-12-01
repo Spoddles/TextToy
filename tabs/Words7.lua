@@ -1,4 +1,4 @@
-Words7 = {
+Words[7] = {
 "AARRGHH",
 "ABACTOR",
 "ABALONE",

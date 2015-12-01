@@ -1,4 +1,4 @@
-Words6 = {
+Words[6] = {
 "AAHING",
 "AALIIS",
 "AARRGH",

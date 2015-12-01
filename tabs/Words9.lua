@@ -1,4 +1,4 @@
-Words9 = {"AARDVARKS",
+Words[9] = {"AARDVARKS",
 "AASVOGELS",
 "ABACTINAL",
 "ABAMPERES",

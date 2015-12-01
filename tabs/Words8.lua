@@ -1,4 +1,4 @@
-Words8 = {
+Words[8] = {
 "AARDVARK",
 "AARDWOLF",
 "AASVOGEL",

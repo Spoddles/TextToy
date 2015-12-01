@@ -1,4 +1,4 @@
-Words3 = {
+Words[3] = {
 "AAH",
 "AAL",
 "AAS",

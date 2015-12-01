@@ -1,4 +1,4 @@
-Words11 = {
+Words[11] = {
 "ABACTINALLY",
 "ABANDONEDLY",
 "ABANDONMENT",

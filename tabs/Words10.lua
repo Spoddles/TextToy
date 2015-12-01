@@ -1,4 +1,4 @@
-Words10 = {
+Words[10] = {
 "AARDWOLVES",
 "ABACTERIAL",
 "ABANDONEES",

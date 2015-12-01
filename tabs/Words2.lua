@@ -1,5 +1,5 @@
 --v112s
-Words2 = {
+Words[2] = {
 "AA",
 "AB",
 "AD",

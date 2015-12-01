@@ -1,4 +1,4 @@
-Words13 = {
+Words[13] = {
 "ABBREVIATIONS",
 "ABBREVIATURES",
 "ABIOGENICALLY",

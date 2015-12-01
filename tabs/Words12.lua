@@ -1,4 +1,4 @@
-Words12 = {
+Words[12] = {
 "ABANDONMENTS",
 "ABANDONWARES",
 "ABBREVIATING",

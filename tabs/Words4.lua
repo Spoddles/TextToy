@@ -1,4 +1,4 @@
-Words4 = {
+Words[4] = {
 "AAHS",
 "AALS",
 "ABAC",
