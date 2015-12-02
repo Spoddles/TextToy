@@ -8,6 +8,7 @@
 	<array>
 		<string>Main</string>
 		<string>Globals</string>
+		<string>Dictionary</string>
 		<string>States</string>
 		<string>Game</string>
 		<string>Levels</string>
@@ -17,21 +18,6 @@
 		<string>Chips</string>
 		<string>OldCode</string>
 		<string>Targets</string>
-		<string>Words1</string>
-		<string>Words10</string>
-		<string>Words11</string>
-		<string>Words12</string>
-		<string>Words13</string>
-		<string>Words14</string>
-		<string>Words15</string>
-		<string>Words2</string>
-		<string>Words3</string>
-		<string>Words4</string>
-		<string>Words5</string>
-		<string>Words6</string>
-		<string>Words7</string>
-		<string>Words8</string>
-		<string>Words9</string>
 	</array>
 	<key>Created</key>
 	<string>2013-06-18 03:26:00 +0000</string>

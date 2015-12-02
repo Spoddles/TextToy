@@ -1,4 +1,22 @@
 function set_Globals()
+    diction=Dictionary("DefaultEnglish")
+    --saveProjectData("Dictionary1",nil)
+    --[[
+    local w=Words[2]
+    print(w[1])
+    local test=readProjectData("Dictionary1")
+    local testread={}
+    if test ==nil then 
+        print("nil")
+        saveProjectData("Dictionary1",table.concat(w,","))
+    else
+        print(test)
+        testread=explode(",",test)
+        local temp=testread[1]
+        print(temp)
+        sprite()
+    end
+      ]]
     g_showinfo=true
     --gState  1 startup screen 2 welcome screen 3 game in motion 4 game complete 5 level intro
     gState=2
@@ -23,12 +41,9 @@ function set_Globals()
     gChipTable.h=HEIGHT-gBi-gTi
     gChipTable.centre=vec2(gLi+(gChipTable.w/2),gBi+(gChipTable.h/2))
     g_scalar=1.2
-    words={}
-    local testtotal=0
-    for i=1,15 do
-    testtotal = testtotal + #Words[i]
-    end
-    print(testtotal)
+    
+    
+    print(diction.total)
     CWLtotal=#Words1+#Words2+#Words3
     CWL1total=#Words1
     CWL2total=#Words2
