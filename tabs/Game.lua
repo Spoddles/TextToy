@@ -1,18 +1,11 @@
 Game = class()
 
 function Game:init()
-    
-    --CWL3=Words3 --words 11-15 letters
     self.currentlevel=0
     self.CurrentWordList={}
-    CurrentLevelLetters={}
-    CLL=CurrentLevelLetters
+    self.levelletters={}
     CurrentLevelDropZones={}
     CLDZ=CurrentLevelDropZones
---    self.DictCountTotal=#Words1+#Words2+#Words3
---    self.DictCountPart1=#Words1
---    self.DictCountPart2=#Words2
---    self.DictCountPart3=#Words3
     self.fontsize=60
     levelintro=LevelIntro()
     levelcomplete=LevelComplete()

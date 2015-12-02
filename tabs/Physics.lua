@@ -46,7 +46,7 @@ function Physics:Clear()
 end
 
 function Physics:draw()
-    for i,j in pairs(CLL) do
+    for i,j in pairs(game.levelletters) do
         if j.mybody.shapeType == CIRCLE then
             strokeWidth(3.0)
             ellipse(0,0,body.radius*2)

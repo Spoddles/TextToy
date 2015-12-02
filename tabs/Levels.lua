@@ -28,18 +28,7 @@ function Levels:setLevel(g,x)
     g.angulardamping=ltable[11]
     local temp
     local t
-    repeat
-    t=math.random(1,CWLtotal)
-        if t>CWL1total+CWL2total then
-            temp=Words3[t-(CWL1total+CWL2total)]
-        elseif t>CWL1total then
-            temp=Words2[t-CWL1total]
-        else
-            temp=Words1[t]
-        end
-    until string.len(temp)<=g.maxwordlength and string.len(temp)>=g.minwordlength
-    --print(CWLtotal," ",t," ",temp)
-    CLW=temp
+    CLW=dictionary:findword(g.minwordlength,g.minwordlength)
     phy.selectingstart=nil
                 phy.selectingend=nil
     phy:reset()
