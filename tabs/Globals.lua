@@ -23,16 +23,12 @@ function set_Globals()
     gChipTable.h=HEIGHT-gBi-gTi
     gChipTable.centre=vec2(gLi+(gChipTable.w/2),gBi+(gChipTable.h/2))
     g_scalar=1.2
-    words={}
-    local testtotal=0
-    for i=1,15 do
-    testtotal = testtotal + #Words[i]
+    local wordtotal=0
+    for i=1,#Words do
+    wordtotal = wordtotal + #Words[i]
     end
-    print(testtotal)
-    CWLtotal=#Words1+#Words2+#Words3
-    CWL1total=#Words1
-    CWL2total=#Words2
-    CWL3total=#Words3
+    print(wordtotal)
+    CWLtotal=wordtotal
     font("HelveticaNeue-CondensedBlack")
     f={} --fonts
     f[1]="AmericanTypewriter-Bold"
