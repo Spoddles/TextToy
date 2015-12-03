@@ -63,9 +63,11 @@ function Welcome:draw()
                 
                 local startx=math.random(0,WIDTH)
                 local starty=-math.random(ci.width,HEIGHT/2)
+                print(startx,starty)
                 self.tweens_title[i].location=vec2(startx,starty)
-                self.tweens_title[i].time=math.random()*1.5+1.5
+                self.tweens_title[i].time=math.random()*1.5+2
                 --local time=5
+                --self.tweens_title[i].time=6
                 self.tweens_title[i].complete=false
                 self.tweens_title[i].timer=0
                 self.tweens_title[i].alpha=0
