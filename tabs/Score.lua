@@ -11,28 +11,11 @@ function Score:init()
 end
 
 function Score:checkforscore(sc)
-    local wordstosearch={}
-    local scored=false
+    local scored,chosenword = false,table.concat(sc)
     if not phy.selecting and sc~=nil and #sc>=game.minwordselect then
-        local chosenword=""
-        for i,k in ipairs(sc) do
-            chosenword = chosenword..k.letter
-            k.chosen=false
-        end
-        local foundmatch=false
-        local wordstosearch={}
-        local stringlen=string.len(chosenword)
-        if stringlen>=11 then
-            wordstosearch=Words3
-            elseif stringlen>=6 then
-            wordstosearch=Words2
-            elseif stringlen>=2 then
-            wordstosearch=Words1
-        end
-        local cnt=#wordstosearch
-        local done=false
-        
-        local i=1
+        local wordstosearch=dictionary.words[string.len(chosenword)]
+        local totalwords=#wordstosearch
+        local foundmatch,done,i = false,false,1
         repeat
         if wordstosearch[i]==string.upper(chosenword) then
             foundmatch=true
@@ -49,8 +32,7 @@ function Score:checkforscore(sc)
             end
         end
         i=i+1
-        until scored or i>cnt
-        --sound(DATA, "ZgBARDhAQEBAQEBAI1HqPrpdqz5Vc84+YABAf0BAQEBAQEBA")
+        until scored or i>totalwords
     end
     phy.chipstocheck={}
     phy.selectedchips={}
@@ -78,18 +60,12 @@ end
 
 function Score:flashScore(s)
     self.fs=FlashScore(WIDTH-gRi-70,g_displayPos,s,400)
-    --self.fs=FlashScore(gLi+gChipTable.w/2,gBi+ggChipTableh/2,s,400)
-    --tween( .3, self.fs, {x = phy.lasttouch.x+80, y = phy.lasttouch.y+50,fs = 20,alpha = 100}) --, function() self.fs=nil end)
-    --tween( .5, self.fs, {x = WIDTH-gRi-70, y = HEIGHT-gTi+44,fs = 0,alpha = 0})
-    
     self.gamescore=self.newscore
 end
 
 function Score:draw()
     if self.fs~=nil then
-        --print(fs)
     if self.fs.complete==false then
-        --print("drawing flash")
         self.fs:draw()
         else
             self.fs=nil
@@ -97,35 +73,15 @@ function Score:draw()
     end
     pushMatrix() pushStyle()
     translate(WIDTH-gRi-70,g_displayPos)
-    --fill(colours["felt_yellow"])
     fill(gColour_score)
     font(f[3])
     textAlign(LEFT)
     fontSize(self.fontsize)
     text(self.gamescore)
     popStyle() popMatrix()
-     
-    
-    --if #self.goodwords>0 then
-        --pushStyle()
-        --fontSize(32)
-        --font(f[3])
-        --for i,j in pairs(self.goodwords) do
-        --local total=#self.goodwords
-        --for i=total,1,-1 do
-          --  local j=total-i+1
-        --pushMatrix()
-        --translate(WIDTH/2,650-(j*50))
-        --fill(0, 255, 229, 120-(j*15))
-        --text(self.goodwords[i])
-        --popMatrix()
-        --end
-        --popStyle()
-    --end
 end
 
 function Score:touched(touch)
-    -- Codea does not automatically call this method
 end
 
 FlashScore = class()
@@ -171,10 +127,8 @@ function FlashScore2:init(x, y, score,f)
 end
 
 function FlashScore2:draw()
-    --print("selfcomp",self.complete,self.alpha,self.x,self.y,self.score)
     pushMatrix()
     translate(self.x+1,self.y+1)
-    --translate(1,1)
     pushStyle()
     font(f[4])
     textMode(CENTER)
