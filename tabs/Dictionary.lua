@@ -19,7 +19,7 @@ end
 
 function Dictionary:findword(min,max)
 --returns random word from all words in dictionary within min and max length provided
-local susbsettotal=0
+local subsettotal=0
 for i=min,max do
 subsettotal=subsettotal+#self.words[i]
 end

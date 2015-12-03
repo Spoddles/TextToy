@@ -96,6 +96,7 @@ function Welcome:draw()
         self.counter=self.counter+DeltaTime
         --print("self.counter",self.counter)
         if self.counter>1 then
+            self.counter=0
             local starty=HEIGHT*1.1
             local startx=math.random()*WIDTH
             local wordnum=#self.background_words+1
