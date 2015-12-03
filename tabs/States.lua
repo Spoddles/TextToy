@@ -96,23 +96,12 @@ function Welcome:draw()
         self.counter=self.counter+DeltaTime
         --print("self.counter",self.counter)
         if self.counter>1 then
-            local randomword=math.random(1,CWLtotal)
-            --print(randomword)
-            self.counter=0
-            local CWLNUM=math.random(1,CWLtotal)
-            if CWLNUM>CWL1total+CWL2total then
-                temp=Words3[CWLNUM-(CWL1total+CWL2total)]
-            elseif CWLNUM>CWL1total then
-                temp=Words2[CWLNUM-CWL1total]
-            else
-                temp=Words1[CWLNUM]
-            end
             local starty=HEIGHT*1.1
             local startx=math.random()*WIDTH
             local wordnum=#self.background_words+1
             --print (wordnum)
             self.background_words[wordnum]={}
-            self.background_words[wordnum].word=temp
+            self.background_words[wordnum].word=dictionary:findword(2,#dictionary.words)
             self.background_words[wordnum].fs=math.random(20,100)
             self.background_words[wordnum].font=math.random(1,#f)
             self.background_words[wordnum].alpha= math.random(20,50)
