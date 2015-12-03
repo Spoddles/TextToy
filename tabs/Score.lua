@@ -11,7 +11,11 @@ function Score:init()
 end
 
 function Score:checkforscore(sc)
-    local scored,chosenword = false,table.concat(sc)
+    local scored,chosenword = false,nil
+    for i,k in ipairs(sc) do
+            chosenword = chosenword..k.letter
+            k.chosen=false
+        end
     if not phy.selecting and sc~=nil and #sc>=game.minwordselect then
         local wordstosearch=dictionary.words[string.len(chosenword)]
         local totalwords=#wordstosearch
